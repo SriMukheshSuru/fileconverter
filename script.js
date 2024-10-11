@@ -83,7 +83,7 @@ document.getElementById('convertBtn').addEventListener('click', function () {
             // Loop through all pages of the PDF sequentially
             for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
                 const page = await pdf.getPage(pageNum);
-                const viewport = page.getViewport({ scale: 1 });
+                const viewport = page.getViewport({ scale: 3 });
                 canvas.width = viewport.width;
                 canvas.height = viewport.height;
                 const renderContext = {
