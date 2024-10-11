@@ -51,7 +51,7 @@ document.getElementById('convertBtn').addEventListener('click', function () {
                     const pdfURL = URL.createObjectURL(pdfBlob);
                     const pdfDownloadLink = document.createElement('a');
                     pdfDownloadLink.href = pdfURL;
-                    pdfDownloadLink.download = `${fileName}-converted.pdf`;
+                    pdfDownloadLink.download = `${fileName}-convertedbySrimukhesh.pdf`;
                     pdfDownloadLink.style.display = 'block';
                     pdfDownloadLink.textContent = 'Download Converted PDF';
                     downloadLinksContainer.appendChild(pdfDownloadLink);
@@ -61,7 +61,7 @@ document.getElementById('convertBtn').addEventListener('click', function () {
                     const convertedImageURL = canvas.toDataURL(mimeType);
                     const imageDownloadLink = document.createElement('a');
                     imageDownloadLink.href = convertedImageURL;
-                    imageDownloadLink.download = `${fileName}-converted.${outputType}`;
+                    imageDownloadLink.download = `${fileName}-convertedbySrimukhesh.${outputType}`;
                     imageDownloadLink.style.display = 'block';
                     imageDownloadLink.textContent = `Download Converted ${outputType.toUpperCase()}`;
                     downloadLinksContainer.appendChild(imageDownloadLink);
@@ -98,7 +98,7 @@ document.getElementById('convertBtn').addEventListener('click', function () {
 
                 const pageDownloadLink = document.createElement('a');
                 pageDownloadLink.href = convertedImageURL;
-                pageDownloadLink.download = `${fileName}-converted-page-${pageNum}.${outputType}`;
+                pageDownloadLink.download = `${fileName}-convertedbySrimukhesh-page-${pageNum}.${outputType}`;
                 pageDownloadLink.textContent = `Download Page ${pageNum} as ${outputType.toUpperCase()}`;
                 pageDownloadLink.style.display = 'block';
                 pageDownloadLink.style.marginTop = '10px';
