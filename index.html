@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic File Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>File Converter</h1>
+
+        <!-- Input file type selector -->
+        <h3>Select Input File Type</h3>
+        <select id="inputFileType">
+            <option value="jpeg">JPG/JPEG</option>
+            <option value="png">PNG</option>
+            <option value="docx">DOCX</option>
+            <option value="pdf">PDF</option>
+        </select>
+
+        <!-- Output file type selector -->
+        <h3>Select Output File Type</h3>
+        <select id="outputFileType">
+            <option value="jpeg">JPG/JPEG</option>
+            <option value="png">PNG</option>
+            <option value="docx">DOCX</option>
+            <option value="pdf">PDF</option>
+        </select>
+
+        <!-- File Input -->
+        <h3>Upload File</h3>
+        <input type="file" id="fileInput" />
+
+        <!-- Convert Button -->
+        <button id="convertBtn">Convert File</button>
+        
+        <!-- Download Links Container (Empty initially) -->
+        <div id="downloadLinksContainer"></div>
+
+
+        <!-- Hidden Canvas for Image Conversion -->
+        <canvas id="imageCanvas" style="display:none;"></canvas>
+
+        <!-- Download Link -->
+        <a id="downloadLink" style="display:none;" download="converted-file">Download Converted File</a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
